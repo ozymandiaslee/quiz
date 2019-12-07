@@ -38,6 +38,7 @@ function init() {
 }
 
 function displayQuestion() {
+    answerEl.textContent = "";
     questionEl.textContent = questions[questionIndex].title;
     for (var i = 0; i < questions[questionIndex].choices.length; i++) {
         var choiceEl = document.createElement("button");
@@ -59,5 +60,7 @@ function displayQuestion() {
         answerEl.append(choiceEl);
     }
 }
+
+
 
 init();
